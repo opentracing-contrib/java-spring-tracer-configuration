@@ -9,8 +9,7 @@ The auto-configuration does following:
 3. If not tracer has been found it returns NoopTracer.
 4. Registers tracer to GlobalTracer - if it has not been registered.
 
-This auto-configuration is usually configured to run it no tracer bean has been provided.
-
+This auto-configuration is usually configured to run if no tracer bean has been provided (e.g. Jaeger/Zipkin starter).
 
 ## Development
 Maven checkstyle plugin is used to maintain consistent code style based on [Google Style Guides](https://github.com/google/styleguide)
