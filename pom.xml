@@ -21,7 +21,7 @@
   <packaging>pom</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <modules>
-    <module>opentracing-spring-tracer-configuration</module>
+    <module>opentracing-spring-tracer-configuration-starter</module>
   </modules>
 
   <name>${project.groupId}:${project.artifactId}</name>
