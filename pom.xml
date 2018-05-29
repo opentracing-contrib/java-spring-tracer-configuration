@@ -25,13 +25,13 @@
   </modules>
 
   <name>${project.groupId}:${project.artifactId}</name>
-  <description>OpenTracing instrumentation for Spring Cloud</description>
-  <url>https://github.com/opentracing-contrib/java-spring-cloud</url>
+  <description>Default OpenTracing tracer provider for Spring</description>
+  <url>https://github.com/opentracing-contrib/java-spring-tracer-configuration</url>
 
   <scm>
-    <url>https://github.com/opentracing-contrib/java-spring-cloud</url>
-    <connection>scm:git:https://github.com/opentracing-contrib/java-spring-cloud.git</connection>
-    <developerConnection>scm:git:https://github.com/opentracing-contrib/java-spring-cloud.git</developerConnection>
+    <url>https://github.com/opentracing-contrib/java-spring-tracer-configuration</url>
+    <connection>scm:git:https://github.com/opentracing-contrib/java-spring-tracer-configuration.git</connection>
+    <developerConnection>scm:git:https://github.com/opentracing-contrib/java-spring-tracer-configuration.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
