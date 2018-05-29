@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package io.opentracing.spring.tracer.configuration;
+package io.opentracing.contrib.spring.tracer.configuration;
 
 import static org.junit.Assert.assertTrue;
 
@@ -21,24 +21,18 @@ import io.opentracing.util.GlobalTracer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @SpringBootTest(
-        classes = {TracerAutoConfigurationWithWrapperTest.SpringConfiguration.class,
+        classes = {
+                BaseTest.SpringConfiguration.class,
                 TestTracerBeanPostProcessor.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 public class TracerAutoConfigurationWithWrapperTest extends BaseTest {
 
   @Autowired
   private Tracer tracer;
-
-  @Configuration
-  @EnableAutoConfiguration
-  public static class SpringConfiguration {
-  }
 
   @Test
   public void testGetAutoWiredTracer() {

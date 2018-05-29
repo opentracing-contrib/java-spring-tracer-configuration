@@ -11,11 +11,26 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package io.opentracing.spring.tracer;
+package io.opentracing.contrib.spring.tracer.configuration;
+
+import io.opentracing.util.GlobalTracerTestUtil;
+import org.junit.BeforeClass;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author Pavol Loffay
  */
-public class Configuration {
+public class BaseTest {
 
+  @Configuration
+  @EnableAutoConfiguration
+  public static class SpringConfiguration {
+
+  }
+
+  @BeforeClass
+  public static void clearGlobalTracer() {
+    GlobalTracerTestUtil.resetGlobalTracer();
+  }
 }
