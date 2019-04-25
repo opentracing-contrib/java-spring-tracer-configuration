@@ -39,8 +39,6 @@ public class TracerRegisterAutoConfiguration {
      * There can be {@link org.springframework.beans.factory.config.BeanPostProcessor}'s which
      * alters tracer bean, therefore tracer registered to GlobalTracer should be autowired.
      */
-    if (!GlobalTracer.isRegistered()) {
-      GlobalTracer.registerIfAbsent(tracer);
-    }
+    GlobalTracer.registerIfAbsent(tracer);
   }
 }
