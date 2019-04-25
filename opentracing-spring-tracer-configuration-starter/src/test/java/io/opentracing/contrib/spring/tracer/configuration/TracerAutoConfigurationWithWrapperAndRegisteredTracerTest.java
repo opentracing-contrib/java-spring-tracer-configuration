@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 The OpenTracing Authors
+ * Copyright 2018-2019 The OpenTracing Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -37,7 +37,7 @@ public class TracerAutoConfigurationWithWrapperAndRegisteredTracerTest extends B
   @BeforeClass
   public static void setGlobalTracer() {
     // Pre-register a tracer with the GlobalTracer
-    GlobalTracer.register(new MockTracer());
+    GlobalTracer.registerIfAbsent(new MockTracer());
   }
 
   @Autowired
