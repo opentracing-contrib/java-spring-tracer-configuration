@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 The OpenTracing Authors
+ * Copyright 2018-2019 The OpenTracing Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -13,6 +13,7 @@
  */
 package io.opentracing.contrib.spring.tracer.configuration;
 
+import io.opentracing.Scope;
 import io.opentracing.ScopeManager;
 import io.opentracing.Span;
 import io.opentracing.SpanContext;
@@ -62,6 +63,11 @@ public class TestTracerBeanPostProcessor implements BeanPostProcessor {
     }
 
     @Override
+    public void close() {
+      wrapped.close();
+    }
+
+    @Override
     public ScopeManager scopeManager() {
       return wrapped.scopeManager();
     }
@@ -69,6 +75,11 @@ public class TestTracerBeanPostProcessor implements BeanPostProcessor {
     @Override
     public Span activeSpan() {
       return wrapped.activeSpan();
+    }
+
+    @Override
+    public Scope activateSpan(Span span) {
+      return wrapped.activateSpan(span);
     }
   }
 }

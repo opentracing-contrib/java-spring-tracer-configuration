@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 The OpenTracing Authors
+ * Copyright 2018-2019 The OpenTracing Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -39,8 +39,6 @@ public class TracerRegisterAutoConfiguration {
      * There can be {@link org.springframework.beans.factory.config.BeanPostProcessor}'s which
      * alters tracer bean, therefore tracer registered to GlobalTracer should be autowired.
      */
-    if (!GlobalTracer.isRegistered()) {
-      GlobalTracer.register(tracer);
-    }
+    GlobalTracer.registerIfAbsent(tracer);
   }
 }

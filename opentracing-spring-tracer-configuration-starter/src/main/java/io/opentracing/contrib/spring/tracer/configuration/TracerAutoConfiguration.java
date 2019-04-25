@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 The OpenTracing Authors
+ * Copyright 2018-2019 The OpenTracing Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -35,8 +35,8 @@ public class TracerAutoConfiguration {
    * <p>
    * The order of getting the tracer is:
    * <ol>
-   *     <li>Tracer registered in {@link GlobalTracer#register(Tracer)}</li>
-   *     <li>Tracer resolved from {@link TracerResolver#resolve()}</li>
+   *     <li>Tracer registered in {@link GlobalTracer#registerIfAbsent(Tracer)}</li>
+   *     <li>Tracer resolved from {@link TracerResolver#resolveTracer()}</li>
    *     <li>Default tracer, which is {@link io.opentracing.noop.NoopTracer}</li>
    * </ol>
    * @return tracer
