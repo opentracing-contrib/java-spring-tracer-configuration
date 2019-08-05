@@ -60,9 +60,9 @@
 
     <!-- spring-boot-starter-parent is a module of spring-boot-dependencies
         https://github.com/spring-projects/spring-boot/blob/master/spring-boot-starters/spring-boot-starter-parent/pom.xml -->
-    <version.org.springframework.boot>1.5.12.RELEASE</version.org.springframework.boot>
-    <version.io.opentracing.contrib-opentracing-tracerresolver>0.1.6</version.io.opentracing.contrib-opentracing-tracerresolver>
-    <version.io.opentracing>0.32.0</version.io.opentracing>
+    <version.org.springframework.boot>2.1.6.RELEASE</version.org.springframework.boot>
+    <version.io.opentracing.contrib-opentracing-tracerresolver>0.1.8</version.io.opentracing.contrib-opentracing-tracerresolver>
+    <version.io.opentracing>0.33.0</version.io.opentracing>
     <version.junit>4.12</version.junit>
 
     <!-- plugins -->
