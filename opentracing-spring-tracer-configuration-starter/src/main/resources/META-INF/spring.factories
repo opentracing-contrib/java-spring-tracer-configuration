@@ -1,3 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-io.opentracing.contrib.spring.tracer.configuration.TracerAutoConfiguration,\
-io.opentracing.contrib.spring.tracer.configuration.TracerRegisterAutoConfiguration

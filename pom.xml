@@ -58,9 +58,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <main.basedir>${project.basedir}</main.basedir>
 
-    <!-- spring-boot-starter-parent is a module of spring-boot-dependencies
-        https://github.com/spring-projects/spring-boot/blob/master/spring-boot-starters/spring-boot-starter-parent/pom.xml -->
-    <version.org.springframework.boot>2.3.4.RELEASE</version.org.springframework.boot>
+    <version.org.springframework.boot>2.7.17</version.org.springframework.boot>
     <version.io.opentracing.contrib-opentracing-tracerresolver>0.1.8</version.io.opentracing.contrib-opentracing-tracerresolver>
     <version.io.opentracing>0.33.0</version.io.opentracing>
     <version.junit>4.12</version.junit>
